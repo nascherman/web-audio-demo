@@ -1,0 +1,51 @@
+@foreground: #e9e9e9;
+@background: #161616; 
+/* test */
+body {
+  .primary-font;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  font-size: 16px;
+  background: black;
+  color: @foreground;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: -1;
+  background-image: url("../background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+// background overlay
+.background:after {
+  display: block;
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.82;
+}
+
+h1 {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}

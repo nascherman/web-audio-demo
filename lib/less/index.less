@@ -1,0 +1,28 @@
+@foreground: #e9e9e9;
+@background: #161616; 
+
+.primary-font {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+.secondary-font {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+}
+
+.ease (@transition: all; @time: 500ms) {
+  transition: @transition @time cubic-bezier(0.190, 1.000, 0.220, 1.000);
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently                            not supported by any browser */
+}
+
+@import "main";
+@import "search";
