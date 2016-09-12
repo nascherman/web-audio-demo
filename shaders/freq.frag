@@ -8,7 +8,7 @@ uniform float x;
 
 vec3 createColor() {
   float spectrumZ = (pos.z) * -z;
-  float spectrumY = (pos.y) * -y;
+  float spectrumY = (pos.z) * -y;
   float spectrumX = (pos.z) * -x;
   return vec3(spectrumX, spectrumY, spectrumZ);
 }
