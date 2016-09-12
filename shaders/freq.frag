@@ -2,11 +2,14 @@ varying vec3 pos;
 
 uniform float zMax;
 uniform float zMin;
+uniform float z;
+uniform float y;
+uniform float x;
 
 vec3 createColor() {
-  float spectrumZ = (pos.z) * -1.0;
-  float spectrumY = (pos.z) * -1.0;
-  float spectrumX = (pos.z) * -1.0;
+  float spectrumZ = (pos.z) * -z;
+  float spectrumY = (pos.y) * -y;
+  float spectrumX = (pos.z) * -x;
   return vec3(spectrumX, spectrumY, spectrumZ);
 }
 
