@@ -2,6 +2,7 @@ const budo = require('budo');
 const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
+var envify = require('envify/custom');
 
 const lessStream = require('less-css-stream');
 const AutoPrefix = require('less-plugin-autoprefix');
@@ -39,7 +40,9 @@ function startDevServer () {
   const app = budo('index.js:bundle.js', {
     dir: path.join(__dirname,'app'),
     browserify: {
-      transform: [ require('babelify') ]
+      transform: [ require('babelify'), envify({
+        NODE_ENV: 'development'
+      }) ]
     },
     css: 'assets/css/main.css',
     stream: process.stdout
