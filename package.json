@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./bundler.js",
     "postinstall": "npm run build",
-    "build": "node ./bundler.js production && browserify index.js -t babelify -t glslify -t envify --NODE_ENV=production | uglifyjs > app/bundle.js"
+    "build": "node ./bundler.js production && browserify index.js -t babelify -t glslify -t envify --NODE_ENV=production > app/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
     "domready": "^1.0.8",
     "envify": "^3.4.1",
     "express": "^4.14.0",
+    "glsl-noise": "0.0.0",
     "glslify": "^5.1.0",
     "gsap": "^1.19.0",
     "lerp": "^1.0.3",
@@ -51,6 +52,7 @@
     "scene-template": "^1.0.7",
     "soundcloud-badge": "^1.1.0",
     "three": "^0.80.1",
+    "three-effectcomposer": "0.0.1",
     "uglifyjs": "^2.4.10",
     "web-audio-analyser": "^2.0.1",
     "web-audio-beat-detector": "0.0.3",
