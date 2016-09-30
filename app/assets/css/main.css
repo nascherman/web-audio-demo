@@ -35,8 +35,14 @@ body {
   width: 100vw;
   height: 100vh;
   position: fixed;
+  background-image: url("../images/web-audio-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   display: block;
   z-index: -1;
+  transition: background-image 0.5s ease-in-out;
+  -webkit-transition: background-image 0.5s ease-in-out;
 }
 .background:after {
   display: block;

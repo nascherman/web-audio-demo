@@ -44,6 +44,8 @@ function startDevServer () {
         NODE_ENV: 'development'
       }) ]
     },
+    debug: true,
+    live: true,
     css: 'assets/css/main.css',
     stream: process.stdout
   }).live()
